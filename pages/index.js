@@ -8,33 +8,26 @@ const HomePage = () => {
     const [startButtonDisabled, setStartButtonDisabled] = useState(true); // Initialize as disabled
 
     useEffect(() => {
-        // Function to update the countdown
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
-            // Calculations for days, hours, minutes, and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Format the countdown string
             const countdownString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-            // Update the countdown state
             setCountdown(countdownString);
 
-            // Enable the start button if the countdown reaches zero
             if (distance <= 0) {
                 setStartButtonDisabled(false);
             }
         };
 
-        // Update the countdown every second
         const countdownInterval = setInterval(updateCountdown, 1000);
 
-        // Clean up the interval on component unmount
         return () => clearInterval(countdownInterval);
     }, [targetDate]);
 
