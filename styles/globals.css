@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'Glacial Indifference';
+	src: url('/rushford-clean-font/Rushfordclean-rgz89.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Glacial Indifference', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	color-scheme: dark;
+}
+
+body {
+	color: #590000;
+	background: #e4daff;
+}
+
+
+h1 {
+    font-size: 38px;
+    font-weight: 400;
+    color: #590000;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+h3, h4, h5, h6{
+	font-weight: 400;
+	color: #680e02;
+	font-size: 40px;
+}
+
+.title {
+	font-size: 44px;
+	margin: 20px 0;
+}
+
+/* styles/Home.module.css */
+.container {
+	text-align: center;
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+.countdown {
+	font-size: 36px;
+}
+
+.button {
+	background-color: #000;
+	color: #fbeb04;
+	/* Green text color */
+	font-size: 28px;
+	padding: 18px 24px 12px 24px;
+	margin: 15px;
+	text-decoration: none;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	transition: background-color 0.2s, box-shadow 0.2s;
+	/* box-shadow: 0 0 0 2px #ff4930; */
+	min-width: 250px;
+	display: flex;
+	justify-content: center;
+	/* Green border shadow */
+}
+
+.button1 {
+	background-color: #fbeb04;
+	color: #000;
+}
+
+.button:hover {
+	background-color: #ff4930;
+	box-shadow: 0 0 10px #ff4930;
+	color: black;
+}
+
+.instructions {
+	margin-top: 20px;
+}
+
+.instructions h2 {
+	font-size: 20px;
+	color: #fbeb04;
+}
+
+.instructions p {
+	color: #fff;
+	font-size: 14px;
+}
