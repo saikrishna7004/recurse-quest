@@ -5,6 +5,12 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Timer';
+	src: url('/glacial-indifference/GlacialIndifference-Regular.otf');
+	font-weight: 100;
+}
+
 html,
 body {
 	padding: 0;

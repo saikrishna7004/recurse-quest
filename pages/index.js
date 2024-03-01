@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const HomePage = () => {
     // Set your target date and time for the treasure hunt
@@ -31,16 +32,20 @@ const HomePage = () => {
         return () => clearInterval(countdownInterval);
     }, [targetDate]);
 
-    return (
-        <div className='container text-center' style={{ height: '90vh', display: 'flex', textAlign: 'center', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/coinquest logo.png" alt="Recurse Logo White" style={{width: '100%', marginTop: '70px', marginBottom: '30px'}} />
-            <h3 style={{marginBottom: '10px', marginTop: '10px'}}>Are you excited for the Quest to begin?</h3>
-            <h3 style={{marginTop: '10px', marginBottom: '10px'}}>The quest will start in: <b>{countdown}</b></h3>
-            <div className='buttons' style={{ margin: '20px 0' }}>
-                <Link className={`button button1`} target='_blank' href="https://drive.google.com/file/d/1wsrBxEw2klM5bggsGhiyBHwaa3bAn3E-">Event Details</Link>
-                <Link className={`button`} target='_blank' href="https://forms.gle/BvTb7RtMbqFNBLve7">Register Here</Link>
+    return (<>
+            <Head>
+                <title>CoinQuest - Recurse</title>
+            </Head>
+            <div className='container text-center' style={{ height: '90vh', display: 'flex', textAlign: 'center', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/coinquest logo.png" alt="Recurse Logo White" style={{width: '100%', marginTop: '50px', marginBottom: '30px'}} />
+                <h3 style={{marginBottom: '10px', marginTop: '10px'}}>Are you excited for the Quest to begin?</h3>
+                <h3 style={{marginTop: '10px', marginBottom: '10px', padding: '10px'}}>The quest will start in: <br /><p style={{fontSize: '60px', margin: '10px 0 0 0', fontWeight: '600', fontFamily: 'sans-serif'}}>{countdown}</p></h3>
+                <div className='buttons'>
+                    <Link className={`button button1`} target='_blank' href="https://drive.google.com/file/d/1wsrBxEw2klM5bggsGhiyBHwaa3bAn3E-">Event Details</Link>
+                    <Link className={`button`} target='_blank' href="https://forms.gle/BvTb7RtMbqFNBLve7">Register Here</Link>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
