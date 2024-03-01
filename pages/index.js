@@ -42,7 +42,7 @@ const HomePage = () => {
                 <h3 style={{marginTop: '10px', marginBottom: '10px', padding: '10px'}}>The quest will start in: <br /><p style={{fontSize: '60px', margin: '10px 0 0 0', fontWeight: '600', fontFamily: 'sans-serif'}}>{countdown}</p></h3>
                 <div className='buttons'>
                     <Link className={`button button1`} target='_blank' href="https://drive.google.com/file/d/1wsrBxEw2klM5bggsGhiyBHwaa3bAn3E-">Event Details</Link>
-                    <Link className={`button`} target='_blank' href="https://recurse-coinquest.vercel.app/">Register Here</Link>
+                    <Link className={`button`} target='_blank' href="https://recurse-coinquest.vercel.app/">Register/Login</Link>
                 </div>
             </div>
         </>
